@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', ['name' => 'Noel']);
+});
+
+Route::get('/tienda/{producto}', function() {
+    return view('shop', ['name' => 'Noel']);
+});
+
+Route::get('/quienes-somos', function() {
+    return view('welcome', ['name' => 'Noel']);
+});
+
+Route::get('/contacto', function() {
+    return view('welcome', ['name' => 'Noel']);
 });
