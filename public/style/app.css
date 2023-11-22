@@ -1,0 +1,387 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: lightblue;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+
+h1 {
+    position: absolute;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white;
+    left: 32%;
+}
+
+h2 {
+    font-size: 2rem;
+    color: white;
+}
+
+.topnav {
+    border: 8px solid hsl(216, 100%, 50%)6ff;
+    background-color: hsl(240, 65%, 49%);
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    padding-right: 15px;
+    padding-left: 20px;
+    display: flex;
+    margin: 5px;
+}
+
+.topnav-filter {
+    border: 5px solid hsl(216, 100%, 50%);
+    background-color: hsl(39, 67%, 92%);
+    justify-content: center;
+    border-radius: 1.5rem;
+    padding: 0.5rem 5%;
+    align-items: start;
+    display: flex;
+    margin: 5px;
+    width: 89%;
+}
+
+.topnav-filter svg {
+    width: 40px;
+    height: 50px;
+}
+
+.users {
+    flex-direction: row;
+    display: flex;
+    width: 30rem;
+    gap: 15px;
+}
+
+nav svg {
+    transition: transform 0.8s ease, color 0.8s ease;
+    cursor: pointer;
+    fill: white;
+}
+
+
+nav svg:hover {
+    transform: scale(1.1);
+}
+
+/* Contenido principal */
+
+.dataMenu {
+    flex-direction: row;
+    display: flex;
+}
+
+.dataMenu-info {
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 10px;
+    overflow: scroll;
+    display: flex;
+    height: 720px;
+    width: 40%;
+}
+
+.dataMenu-info::-webkit-scrollbar {
+    display: none;
+}
+
+.dataMenu-card {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    background-color: transparent;
+    border: 5px solid #06f;
+    border-right-width: 8px;
+    border-top-width: 10px;
+    border-radius: 15px;
+    margin-right: 50px;
+    text-indent: 20px;
+    font-size: 16px;
+    width: 600px;
+    margin: 10px;
+}
+
+.dataMenu-card-buttons {
+    flex-direction: row-reverse;
+    border-radius: 15px;
+    display: flex;
+    height: 0px;
+    gap: 5px;
+}
+
+.dataMenu-card-buttons button {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background-color: #06f;
+    justify-content: center;
+    border-radius: 15px;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    display: flex;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+
+.dataMenu-card-buttons button:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.05);
+}
+
+.dataMenu-form {
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 60%;
+}
+
+.dataMenu-form-buttons {
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 20px;
+    display: flex;
+    height: 70px;
+}
+
+.dataMenu-form-buttons button {
+    margin-right: 20px;
+    cursor: pointer;
+    border: none;
+    height: 60px;
+    width: 70px;
+}
+
+.dataMenu-form-buttons button:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.05);
+}
+
+.dataMenu-form-writter {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+form {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background: linear-gradient(to left, #007BFF, #00BFFF);
+    border-right-width: 8px;
+    border: 5px solid #06f;
+    justify-content: center;
+    border-top-width: 25px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    align-items: center;
+    padding-top: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    display: flex;
+    width: 850px;
+    gap: 15px;
+}
+
+form input {
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    border: 5px solid #f8eedb;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 22px;
+    outline: none;
+    width: 380px;
+    height: 30px;
+}
+
+input:focus {
+    border: 5px solid #06f;
+}
+
+.writter-section {
+    flex-direction: column;
+    display: flex;
+}
+
+.writter-section label {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    font-weight: bolder;
+    text-indent: 10px;
+    font-size: 22px;
+}
+
+
+/* Botones */
+
+button {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    transition: background-color 0.2s ease-in-out;
+    background-color: #06f;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    z-index: 1;
+}
+
+button::before {
+    transition: left 0.2s ease-in-out;
+    background-color: steelblue;
+    position: absolute;
+    height: 100%;
+    content: '';
+    left: -100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+}
+
+.delete::before {
+    background-color: rgb(214, 43, 43);
+}
+
+.edit::before {
+    background-color: rgb(49, 214, 43);
+}
+
+button:hover::before {
+    left: 0;
+}
+
+@media only screen and (max-width: 1550px) {
+
+    body {
+        overflow-y: visible;
+    }
+
+    h1,
+    h2 {
+        display: none;
+    }
+
+    .topnav-filter {
+        width: 87%;
+    }
+
+    .dataMenu {
+        flex-direction: column;
+    }
+
+    .dataMenu-info {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+    }
+
+    .dataMenu-card {
+        width: 40%;
+    }
+
+    .dataMenu-card-buttons button {
+        height: 40px;
+        width: 40px;
+    }
+
+    .dataMenu-form {
+        height: 100%;
+        width: 100%;
+    }
+
+    form {
+        margin-bottom: 130px;
+        margin-top: 10px;
+        width: 900px;
+        margin: 5px;
+        gap: 20px;
+    }
+
+    form input {
+        width: 300px;
+        height: 30px;
+    }
+
+    .writter-section label {
+        font-size: 18px;
+        text-indent: 0;
+    }
+
+    main {
+        margin-bottom: 150px;
+    }
+
+    @media only screen and (max-width: 1280px) {
+
+        .dataMenu-info {
+            flex-direction: column;
+        }
+
+        .dataMenu-card {
+            font-size: 15px;
+            width: 80%;
+        }
+
+        @media only screen and (max-width: 769px) {
+
+            h1,
+            h2 {
+                display: none;
+            }
+
+            .dataMenu-card {
+                font-size: 13px;
+                height: 100px;
+                width: 350px;
+            }
+
+            .dataMenu-info {
+                justify-content: start;
+                align-items: center;
+                overflow: visible;
+            }
+
+            .dataMenu-card-buttons button {
+                border-radius: 5px;
+                height: 35px;
+                width: 35px;
+            }
+
+            form {
+                margin-bottom: 15px;
+                flex-direction: row;
+                margin-top: 20px;
+            }
+
+            form input {
+                font-size: 20px;
+                height: 30px;
+                width: 150px;
+            }
+
+            .writter-section label {
+                font-size: 15px;
+                text-indent: 0;
+            }
+
+            .dataMenu-card-data {
+                margin-top: 20px;
+                font-size: 11px;
+            }
+
+            main {
+                margin-bottom: 90px;
+            }
+        }
+    }
+}

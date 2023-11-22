@@ -17,14 +17,6 @@ Route::get('/', function () {
     return view('welcome', ['name' => 'Noel']);
 });
 
-Route::get('/tienda/{producto}', function() {
-    return view('shop', ['name' => 'Noel']);
-});
-
-Route::get('/quienes-somos', function() {
-    return view('welcome', ['name' => 'Noel']);
-});
-
-Route::get('/contacto', function() {
-    return view('welcome', ['name' => 'Noel']);
+Route::get('/admin', function () {
+    return view('admin.users.index');
 });
