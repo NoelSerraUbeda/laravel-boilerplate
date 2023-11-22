@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome', ['name' => 'Noel']);
 });
 
-Route::get('/admin', function () {
+Route::get('/usuarios', function () {
     return view('admin.users.index');
+});
+
+Route::get('/usuarios/eventos', function () {
+    return view('admin.events.index');
 });

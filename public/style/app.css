@@ -48,8 +48,8 @@ h2 {
 }
 
 .topnav-filter svg {
-    width: 40px;
-    height: 50px;
+    width: 30px;
+    height: 40px;
 }
 
 .users {
@@ -188,7 +188,8 @@ form {
     gap: 15px;
 }
 
-form input {
+form input,
+textarea {
     background-image: linear-gradient(to bottom, #fff, #f8eedb);
     border: 5px solid #f8eedb;
     border-radius: 15px;
@@ -196,11 +197,37 @@ form input {
     margin-top: 5px;
     font-size: 22px;
     outline: none;
-    width: 380px;
     height: 30px;
+    width: 350px;
+}
+
+.row-input {
+    width: 90%;
+}
+
+.row-input input {
+    width: 100%;
 }
 
 input:focus {
+    border: 5px solid #06f;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+textarea {
+    text-align: start;
+    height: 200px;
+    padding: 5px;
+    resize: none;
+    width: 100%;
+}
+
+textarea:focus {
     border: 5px solid #06f;
 }
 
@@ -339,7 +366,6 @@ button:hover::before {
 
             .dataMenu-card {
                 font-size: 13px;
-                height: 100px;
                 width: 80%;
                 margin-left: 0;
             }
@@ -365,10 +391,10 @@ button:hover::before {
             form input {
                 font-size: 20px;
                 height: 30px;
-                width: 150px;
+                width: 180px;
             }
 
-            .writter-section label {
+            .row-input label {
                 font-size: 15px;
                 text-indent: 0;
             }
