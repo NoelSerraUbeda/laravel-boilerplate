@@ -1,8 +1,8 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: lightblue;
+    background-color: hsl(195, 53%, 79%);
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 0;
     padding: 0;
 }
@@ -10,23 +10,28 @@ body {
 /* Encabezado */
 
 h1 {
+    color: hsl(0, 0%, 100%);
     position: absolute;
     font-size: 3.5rem;
     font-weight: 900;
-    color: white;
     left: 32%;
 }
 
-h2 {
+h4 {
     font-size: 2rem;
-    color: white;
+    color: hsl(39, 67%, 92%);
+}
+
+header {
+    position: relative;
+    z-index: 6;
 }
 
 .topnav {
-    border: 8px solid hsl(216, 100%, 50%)6ff;
+
+    position: relative;
     background-color: hsl(240, 65%, 49%);
     justify-content: space-between;
-    flex-direction: row;
     align-items: center;
     border-radius: 10px;
     padding-right: 15px;
@@ -38,13 +43,20 @@ h2 {
 .topnav-filter {
     border: 5px solid hsl(216, 100%, 50%);
     background-color: hsl(39, 67%, 92%);
-    justify-content: center;
+    transition: height 0.5s ease;
+    justify-content: start;
+    padding-bottom: 0.8rem;
+    flex-direction: column;
     border-radius: 1.5rem;
+    align-items: center;
+    align-items: center;
+    position: relative;
     padding: 0.5rem 5%;
-    align-items: start;
+    overflow: hidden;
     display: flex;
+    height: 50px;
     margin: 5px;
-    width: 89%;
+    width: 35%;
 }
 
 .topnav-filter svg {
@@ -53,27 +65,69 @@ h2 {
 }
 
 .users {
-    flex-direction: row;
     display: flex;
     width: 30rem;
     gap: 15px;
 }
 
 nav svg {
-    transition: transform 0.8s ease, color 0.8s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
+    fill: hsl(0, 0%, 100%);
     cursor: pointer;
-    fill: white;
 }
-
 
 nav svg:hover {
     transform: scale(1.1);
 }
 
+/* Panel del navegador */
+
+.main-topbar
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.topnav-menu {
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    border: 5px solid hsl(211, 100%, 50%);
+    transition: height 0.5s ease;
+    border-radius: 25px;
+    position: absolute;
+    overflow: hidden;
+    height: 0px;
+    margin: 5px;
+    z-index: -4;
+    width: 98%;
+    left: 10px;
+    top: 60px;
+}
+
+.topnav-menu-content {
+    justify-content: center;
+    align-items: start;
+    padding: 10px;
+    display: flex;
+    gap: 100px;
+}
+
+.topnav-menu-content h4 {
+    color: hsl(0, 0%, 96%);
+}
+
+.topnav-menu-content-card {
+    border: 5px solid hsl(211, 100%, 50%);
+    background-color: hsl(195, 53%, 79%);
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 25px;
+    width: 33%;
+}
+
 /* Contenido principal */
+/* Tabla */
 
 .dataMenu {
-    flex-direction: row;
     display: flex;
 }
 
@@ -95,19 +149,19 @@ nav svg:hover {
 .dataMenu-card {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     background-image: linear-gradient(to bottom, #fff, #f8eedb);
-    background-color: transparent;
-    border: 5px solid #06f;
+    border: 5px solid hsl(216, 100%, 50%);
     border-right-width: 8px;
     border-top-width: 10px;
     border-radius: 15px;
     text-indent: 20px;
+    font-size: 18px;
     margin: 10px;
-    font-size: 16px;
     width: 700px;
 }
 
 .dataMenu-card-buttons {
     flex-direction: row-reverse;
+    margin-bottom: 20px;
     border-radius: 15px;
     display: flex;
     height: 0px;
@@ -115,8 +169,7 @@ nav svg:hover {
 }
 
 .dataMenu-card-buttons button {
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    background-color: #06f;
+    background-color: hsl(216, 100%, 50%);
     justify-content: center;
     border-radius: 15px;
     align-items: center;
@@ -134,21 +187,25 @@ nav svg:hover {
     transform: scale(1.05);
 }
 
+/* Formulario */
+
 .dataMenu-form {
     flex-direction: column;
-    position: relative;
     display: flex;
-    height: 100%;
     width: 100%;
 }
 
 .dataMenu-form-buttons {
+    margin-bottom: 10px;
     justify-content: end;
     align-items: center;
-    flex-direction: row;
-    margin-left: 20px;
     display: flex;
-    height: 70px;
+    gap: 30px;
+    flex-direction: row-reverse;
+}
+
+.button-panel {
+    display: flex;
 }
 
 .dataMenu-form-buttons button {
@@ -164,7 +221,47 @@ nav svg:hover {
     transform: scale(1.05);
 }
 
+.dataMenu-form-windows {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    border: 5px solid hsl(216, 100%, 50%);
+    border-radius: 5px;
+    width: 50rem;
+    overflow: hidden;
+    height: 60%;
+    position: relative;
+}
+
+.dataMenu-form-windows ul {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 0px;
+    margin-left: -45px;
+    list-style: none;
+}
+
+.dataMenu-form-windows li {
+    color:hsl(216, 100%, 50%);
+    font-weight: 900;
+    padding: 1.2rem 1rem;
+    margin-top: -20px;
+}
+
+.dataMenu-form-windows li:hover {
+    background-color: hsl(207, 44%, 49%);
+    color:  hsl(39, 67%, 92%);
+    cursor: pointer;
+}
+
+ul .selected
+{
+    background-color: hsl(216, 100%, 50%);
+    color: hsl(39, 67%, 92%);
+}
+
 .dataMenu-form-writter {
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -172,33 +269,38 @@ nav svg:hover {
 
 form {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    background: linear-gradient(to left, #007BFF, #00BFFF);
-    border-right-width: 8px;
-    border: 5px solid #06f;
+    background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
+    border: 5px solid hsl(216, 100%, 50%);
     justify-content: center;
     border-top-width: 25px;
     padding-bottom: 20px;
     border-radius: 15px;
     align-items: center;
     padding-top: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     flex-wrap: wrap;
     display: flex;
     width: 850px;
     gap: 15px;
 }
 
+#image
+{
+    display: none;
+}
+
 form input,
 textarea {
-    background-image: linear-gradient(to bottom, #fff, #f8eedb);
-    border: 5px solid #f8eedb;
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    border: 5px solid hsl(39, 67%, 92%);
     border-radius: 15px;
     text-align: center;
     margin-top: 5px;
     font-size: 22px;
     outline: none;
     height: 30px;
-    width: 350px;
+    width: 365px;
+    padding: 0px;
 }
 
 .row-input {
@@ -206,29 +308,45 @@ textarea {
 }
 
 .row-input input {
-    width: 100%;
+    width: 98.8%;
 }
 
 input:focus {
-    border: 5px solid #06f;
+    border: 5px solid hsl(216, 100%, 50%);
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 textarea {
+    padding: 10px;
+    box-sizing: border-box;
     text-align: start;
-    height: 200px;
-    padding: 5px;
+    height: 150px;
     resize: none;
     width: 100%;
 }
 
+textarea::-webkit-scrollbar {
+    width: 12px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: hsl(207, 44%, 49%);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+textarea::-webkit-scrollbar-track {
+    background-color: hsl(39, 67%, 92%);
+    border-radius: 25px;
+}
+
 textarea:focus {
-    border: 5px solid #06f;
+    border: 5px solid hsl(216, 100%, 50%);
 }
 
 .writter-section {
@@ -238,19 +356,23 @@ textarea:focus {
 
 .writter-section label {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: whitesmoke;
+    color: hsl(0, 0%, 96%);
     font-weight: bolder;
     text-indent: 10px;
     font-size: 22px;
 }
 
-
 /* Botones */
 
-button {
+header button:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.05);
+}
+
+main button {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     transition: background-color 0.2s ease-in-out;
-    background-color: #06f;
+    background-color: hsl(216, 100%, 50%);
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -259,9 +381,17 @@ button {
     z-index: 1;
 }
 
-button::before {
+.topnav-filter button {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.topnav-filter button:hover {
+    transform: scale(1.1);
+}
+
+main button::before {
     transition: left 0.2s ease-in-out;
-    background-color: steelblue;
+    background-color: hsl(207, 44%, 49%);
     position: absolute;
     height: 100%;
     content: '';
@@ -272,15 +402,37 @@ button::before {
 }
 
 .delete::before {
-    background-color: rgb(214, 43, 43);
+    background-color: hsl(0, 68%, 50%);
 }
 
 .edit::before {
-    background-color: rgb(49, 214, 43);
+    background-color: hsl(118, 68%, 50%);
 }
 
 button:hover::before {
     left: 0;
+}
+
+.gallery {
+    justify-content: start;
+    overflow: scroll;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 20px;
+    height: 380px;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery img {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 250px;
+    height: auto;
+    margin: 10px;
 }
 
 @media only screen and (max-width: 1550px) {
@@ -289,8 +441,13 @@ button:hover::before {
         overflow-y: visible;
     }
 
-    h1,
-    h2 {
+    .dataMenu-form-windows {
+        height: 50px;
+        width: 75%;
+    }
+
+    .topnav h1,
+    h4 {
         display: none;
     }
 
@@ -333,13 +490,17 @@ button:hover::before {
     }
 
     form input {
-        width: 300px;
+        width: 350px;
         height: 30px;
     }
 
     .writter-section label {
         font-size: 18px;
         text-indent: 0;
+    }
+
+    .topnav-menu {
+        width: 97%;
     }
 
     main {
@@ -357,12 +518,11 @@ button:hover::before {
             width: 80%;
         }
 
-        @media only screen and (max-width: 769px) {
+        .topnav-menu {
+            width: 95%;
+        }
 
-            h1,
-            h2 {
-                display: none;
-            }
+        @media only screen and (max-width: 769px) {
 
             .dataMenu-card {
                 font-size: 13px;
@@ -380,6 +540,10 @@ button:hover::before {
                 border-radius: 5px;
                 height: 35px;
                 width: 35px;
+            }
+
+            .dataMenu-form-buttons {
+                margin-bottom: 0px;
             }
 
             form {
@@ -402,6 +566,25 @@ button:hover::before {
             .dataMenu-card-data {
                 margin-top: 20px;
                 font-size: 11px;
+            }
+
+            .topnav-menu {
+                width: 92%;
+            }
+
+            .dataMenu-form-writter {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+
+            .dataMenu-form-windows {
+                display: none;
+            }
+
+            .gallery img {
+                width: 400px;
             }
 
             main {

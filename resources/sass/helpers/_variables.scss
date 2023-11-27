@@ -1,0 +1,25 @@
+// Tipografia
+$font-stack:Verdana, Geneva, Tahoma, sans-serif;
+
+
+// Colores
+$background-card:linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+$secondary-color: hsl(216, 100%, 50%);
+$primary-color: hsl(240, 65%, 49%);
+$tertiary-color: hsl(39, 67%, 92%);
+$hover-color: hsl(207, 44%, 49%);
+$filter-hover:hsl(39, 100%, 50%);
+$green-color: hsl(118, 68%, 50%);
+$background: hsl(195, 53%, 79%);
+$text-color: hsl(0, 0%, 100%);
+$red-color: hsl(0, 68%, 50%);
+
+
+// Sombras
+$box: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+$text: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+// Z-index
+$header: 6;
+$topnav: -4;
+

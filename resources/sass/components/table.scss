@@ -1,0 +1,84 @@
+// Tabla
+
+.dataMenu {
+    display: flex;
+}
+
+.dataMenu-table {
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    overflow: scroll;
+    display: flex;
+    height: 720px;
+    width: 100%;
+}
+
+.dataMenu-table::-webkit-scrollbar {
+    display: none;
+}
+
+.dataMenu-card {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    border: 5px solid hsl(216, 100%, 50%);
+    border-right-width: 8px;
+    border-top-width: 10px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    text-indent: 20px;
+    font-size: 18px;
+    margin: 10px;
+    width: 700px;
+}
+
+.dataMenu-card-buttons {
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    display: flex;
+    height: 20px;
+    gap: 5px;
+}
+
+.dataMenu-card-buttons button {
+    background-color: hsl(216, 100%, 50%);
+    justify-content: center;
+    border-radius: 15px;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    display: flex;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+
+.dataMenu-card-buttons button:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.05);
+}
+
+.gallery {
+    justify-content: start;
+    overflow: scroll;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 20px;
+    height: 380px;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery img {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 250px;
+    height: auto;
+    margin: 10px;
+}
