@@ -321,15 +321,6 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-textarea {
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: start;
-    height: 150px;
-    resize: none;
-    width: 100%;
-}
-
 textarea::-webkit-scrollbar {
     width: 12px;
 }
