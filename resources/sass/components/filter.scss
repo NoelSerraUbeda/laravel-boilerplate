@@ -1,90 +1,89 @@
-/* Filtrador */
+.topnav-filter {
+  border: 5px solid hsl(216, 100%, 50%);
+  background-color: hsl(39, 67%, 92%);
+  transition: height 0.5s ease;
+  justify-content: start;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  align-items: center;
+  align-items: start;
+  padding: 0.6rem 2%;
+  margin-right: 15px;
+  overflow: hidden;
+  margin-left: 5px;
+  margin-top: 5px;
+  display: flex;
+  width: 100%;
+}
 
-.filter-open {
-  height: 200px;
+.topnav-filter svg {
+  width: 30px;
+  height: 40px;
 }
 
 .topnav-filter-form {
-  display: flex;
+  transition: visibility 0s, opacity 0.3s ease;
+  background-color: hsla(0, 0%, 0%, 0.7);
   justify-content: center;
+  position: fixed;
+  visibility: hidden;
+  align-items: start;
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 33;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  display: flex;
+}
+
+.topnav-filter-form.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .topnav-filter-form form {
-  position: absolute;
-  margin-right: 0;
-  width: 80%;
-  gap: 3rem;
-  top: 70px;
-}
-
-.topnav-filter-form input {
-  width: 60%;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  flex-direction: column;
+  font-display: flex;
+  margin-top: 10%;
+  width: 30.1%;
+  height: 40%;
+  z-index: 33;
 }
 
 .topnav-filter-form label {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 96%);
   font-weight: bolder;
   text-indent: 10px;
-  font-size: 26px;
+  font-size: 32px;
 }
 
-.topnav-filter button {
-  transition: transform 0.3s ease, color 0.3s ease;
+.filter-input {
+  flex-direction: column;
+  margin-bottom: 1rem;
+  display: flex;
+  width: 80%;
 }
 
-.topnav-filter button:hover {
-  transform: scale(1.1);
+.filter-input input {
+  width: 100%;
 }
 
-.filter-input button {
-  background-color: hsl(0, 0%, 100%);
+.filter-input.buttons {
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
 }
 
-.filter-input button::before {
-  background-color: hsl(39, 100%, 50%);
-}
-
-@media only screen and (max-width: 1550px) {
-
-  .topnav-filter-form form {
-    gap: 2rem;
-  }
-
-  .topnav-filter-form label {
-    font-size: 18px;
-  }
-
-  .topnav-filter-form input {
-    width: 50%;
-  }
-
-  @media only screen and (max-width: 1280px) {
-
-    .topnav-filter-form label {
-      font-size: 16px;
-    }
-
-    .topnav-filter-form input {
-      width: 160px;
-    }
-
-    @media only screen and (max-width: 769px) {
-      .topnav-filter-form form {
-        flex-direction: column;
-      }
-
-      .topnav-filter-form label {
-        font-size: 14px;
-      }
-
-      .topnav-filter-form input {
-        width: 100%;
-      }
-
-      .filter-open {
-        height: 25rem;
-      }
-    }
-  }
+.filter-input.buttons button {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.8rem;
+  height: 100%;
+  width: 40%;
+  padding: 0.2rem;
 }

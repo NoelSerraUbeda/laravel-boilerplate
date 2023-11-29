@@ -1,18 +1,23 @@
-// Tabla
-
 .dataMenu {
     display: flex;
+}
+
+.dataMenu-area {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 43rem;
+    width: 100%;
 }
 
 .dataMenu-table {
     justify-content: start;
     flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
+    height: 100%;
     overflow: scroll;
     display: flex;
-    height: 720px;
-    width: 100%;
+    width: 80%;
 }
 
 .dataMenu-table::-webkit-scrollbar {
@@ -25,10 +30,9 @@
     border: 5px solid hsl(216, 100%, 50%);
     border-right-width: 8px;
     border-top-width: 10px;
-    padding-bottom: 20px;
     border-radius: 15px;
     text-indent: 20px;
-    font-size: 18px;
+    font-size: 17px;
     margin: 10px;
     width: 700px;
 }
@@ -38,7 +42,7 @@
     margin-bottom: 20px;
     border-radius: 15px;
     display: flex;
-    height: 20px;
+    height: 0px;
     gap: 5px;
 }
 
@@ -61,24 +65,26 @@
     transform: scale(1.05);
 }
 
-.gallery {
-    justify-content: start;
-    overflow: scroll;
-    flex-wrap: wrap;
+.dataMenu-pages {
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    border: 3px hsl(216, 100%, 50%) solid;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding-right: 30px;
+    margin-right: 90px;
+    height: 3.5rem;
     display: flex;
-    padding: 20px;
-    height: 380px;
+    width: 85%;
 }
 
-.gallery::-webkit-scrollbar {
-    display: none;
+.dataMenu-pages ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
 }
 
-.gallery img {
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 250px;
-    height: auto;
-    margin: 10px;
+.actual-page {
+    font-weight: 900;
+    text-decoration: underline;
+    color: hsl(216, 100%, 50%);
 }

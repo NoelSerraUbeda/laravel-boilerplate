@@ -1,15 +1,73 @@
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: hsl(195, 53%, 79%);
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+button:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.05);
 }
 
-.dataMenu {
+.topnav-filter button {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+main button::before {
+    transition: left 0.2s ease-in-out;
+    background-color: hsl(207, 44%, 49%);
+    position: absolute;
+    height: 100%;
+    content: '';
+    left: -100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+}
+
+.delete::before {
+    background-color: hsl(0, 68%, 50%);
+}
+
+.edit::before {
+    background-color: hsl(118, 68%, 50%);
+}
+
+.filter-input .green::before {
+    background-color: hsl(118, 68%, 50%);
+}
+
+.green span {
+    color: hsl(0, 0%, 100%);
+}
+
+.red span {
+    color: hsl(0, 0%, 100%);
+}
+
+.filter-input .red::before {
+    background-color: hsl(0, 68%, 50%);
+}
+
+button:hover::before {
+    left: 0;
+}
+
+.gallery {
+    justify-content: start;
+    overflow: scroll;
+    flex-wrap: wrap;
     display: flex;
-} 
+    padding: 1rem;
+    height: 20rem;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery img {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0.5rem;
+    width: 250px;
+    height: auto;
+}
 
 @media only screen and (max-width: 1550px) {
 
@@ -17,12 +75,177 @@ body {
         overflow-y: visible;
     }
 
+    .dataMenu-form-windows {
+        height: 50px;
+        width: 30rem;
+    }
+
+    .topnav h1,
+    h4 {
+        display: none;
+    }
+
+    .topnav-filter {
+        width: 100%;
+    }
+
+    .topnav-filter-form form {
+        height: 50%;
+        width: 60%;
+        margin-left: 0;
+        margin-top: 200px;
+    }
+
+    .filter-menu label {
+        font-size: 20px;
+    }
+
+    .dataMenu {
+        flex-direction: column;
+    }
+
+    .dataMenu-table {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 80px;
+        padding-right: 0;
+    }
+
+    .dataMenu-card {
+        font-size: 15px;
+        width: 80%;
+    }
+
+    .dataMenu-card-buttons button {
+        height: 40px;
+        width: 40px;
+    }
+
+    .dataMenu-form {
+        height: 100%;
+        width: 100%;
+    }
+
+    form {
+        margin-bottom: 130px;
+        margin-top: 10px;
+        width: 900px;
+        margin: 5px;
+        gap: 20px;
+    }
+
+    form input {
+        width: 350px;
+        height: 30px;
+    }
+
+    .area-section label {
+        font-size: 18px;
+        text-indent: 0;
+    }
+
+    .topnav-menu {
+        width: 97%;
+    }
+
+    .dataMenu-pages {
+        margin-right: 0;
+    }
+
+    .buttons button {
+        font-size: 1.5rem;
+        height: 150%;
+        width: 20%;
+    }
+
     main {
         margin-bottom: 150px;
     }
 
     @media only screen and (max-width: 1280px) {
+
+        .dataMenu-table {
+            flex-direction: column;
+            padding-top: 50px;
+        }
+
+
+        .topnav-menu {
+            width: 95%;
+        }
+
+        .buttons button {
+            font-size: 1rem;
+        }
+
         @media only screen and (max-width: 769px) {
+
+            .dataMenu-card {
+                font-size: 13px;
+                width: 80%;
+                margin-left: 0;
+            }
+
+            .dataMenu-table {
+                justify-content: start;
+                align-items: center;
+                overflow: visible;
+                padding-top: 0px;
+            }
+
+            .dataMenu-card-buttons button {
+                border-radius: 5px;
+                height: 35px;
+                width: 35px;
+            }
+
+            .topnav-form-buttons {
+                margin-bottom: 0px;
+            }
+
+            form {
+                margin-bottom: 15px;
+                flex-direction: row;
+                margin-top: 20px;
+            }
+
+            form input {
+                font-size: 20px;
+                height: 30px;
+                width: 180px;
+            }
+
+            .filter-input.buttons button {
+                font-size: 1.2rem;
+                height: 3rem;
+            }
+
+            .row-input label {
+                font-size: 15px;
+                text-indent: 0;
+            }
+
+            .dataMenu-card-data {
+                margin-top: 20px;
+                font-size: 11px;
+            }
+
+            .topnav-menu {
+                width: 9;
+            }
+
+            .dataMenu-form-area {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+
+            .dataMenu-form-windows {
+                display: none;
+            }
+
             .gallery img {
                 width: 400px;
             }
