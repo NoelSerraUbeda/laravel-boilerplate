@@ -1,0 +1,835 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: hsl(195, 53%, 79%);
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: hsl(0, 0%, 100%);
+    position: absolute;
+    font-size: 3.5rem;
+    font-weight: 900;
+    left: 32%;
+}
+
+h4 {
+    font-size: 2rem;
+    color: white;
+}
+
+header {
+    position: relative;
+    z-index: 8;
+}
+
+main button {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    transition: background-color 0.2s ease-in-out;
+    background-color: hsl(216, 100%, 50%);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+}
+
+/* Encabezado */
+.topnav {
+
+    position: relative;
+    border: 8px solid hsl(216, 100%, 50%)6ff;
+    background-color: hsl(240, 65%, 49%);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding-right: 15px;
+    padding-left: 20px;
+    display: flex;
+    margin: 5px;
+}
+
+.users {
+    display: flex;
+    width: 30rem;
+    gap: 15px;
+}
+
+.menu-icon {
+    position: relative;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+    display: block;
+    font: inherit;
+    border: none;
+    padding: 5px;
+}
+
+.bar {
+    background-color: white;
+    height: 5px;
+    width: 50px;
+    margin: 6px 0;
+    transition: 0.8s;
+}
+
+.menu-icon.active .bar:nth-child(1) {
+    transform: rotate(-405deg) translate(-7px, 8px);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+    width: 0;
+    background-color: hsl(240, 65%, 49%);
+}
+
+.menu-icon.active .bar:nth-child(3) {
+    transform: rotate(405deg) translate(-7px, -8px);
+}
+
+.topnav-menu {
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    border: 5px solid hsl(211, 100%, 50%);
+    transition: height 0.5s ease;
+    border-radius: 25px;
+    position: absolute;
+    overflow: hidden;
+    height: 0px;
+    margin: 5px;
+    z-index: -1;
+    width: 98%;
+    left: 10px;
+    top: 60px;
+}
+
+.topnav-menu-content {
+    justify-content: center;
+    align-items: start;
+    padding: 10px;
+    display: flex;
+    gap: 100px;
+}
+
+.topnav-menu.active {
+    height: 50rem;
+}
+
+
+.topnav-menu-content h4 {
+    color: hsl(0, 0%, 96%);
+}
+
+.topnav-menu-content-card {
+    border: 5px solid hsl(211, 100%, 50%);
+    background-color: hsl(195, 53%, 79%);
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 25px;
+    width: 33%;
+}
+
+.main-topbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Filtrador */
+
+.topnav-filter {
+    border: 5px solid hsl(216, 100%, 50%);
+    background-color: hsl(39, 67%, 92%);
+    transition: height 0.5s ease;
+    justify-content: start;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    align-items: center;
+    align-items: start;
+    padding: 0.6rem 2%;
+    margin-right: 15px;
+    overflow: hidden;
+    margin-left: 5px;
+    margin-top: 5px;
+    display: flex;
+    width: 100%;
+}
+
+.topnav-filter svg {
+    width: 30px;
+    height: 40px;
+}
+
+.topnav-filter-form {
+    transition: visibility 0s, opacity 0.3s ease;
+    background-color: hsla(0, 0%, 0%, 0.7);
+    justify-content: center;
+    position: fixed;
+    visibility: hidden;
+    align-items: start;
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 33;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    display: flex;
+}
+
+.topnav-filter-form.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.topnav-filter-form form {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    flex-direction: column;
+    font-display: flex;
+    margin-top: 10%;
+    width: 30.1%;
+    height: 40%;
+    z-index: 33;
+}
+
+.topnav-filter-form label {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: hsl(0, 0%, 96%);
+    font-weight: bolder;
+    text-indent: 10px;
+    font-size: 32px;
+}
+
+.filter-input {
+    flex-direction: column;
+    margin-bottom: 1rem;
+    display: flex;
+    width: 80%;
+}
+
+.filter-input input {
+    width: 100%;
+}
+
+.filter-input.buttons {
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+}
+
+.filter-input.buttons button {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.8rem;
+    height: 100%;
+    width: 40%;
+    padding: 0.2rem;
+}
+
+/* Contenido principal */
+
+/* Tabla */
+
+.dataMenu {
+    display: flex;
+}
+
+.dataMenu-area {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 43rem;
+    width: 100%;
+}
+
+.dataMenu-table {
+    justify-content: start;
+    flex-direction: column;
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+    width: 80%;
+}
+
+.dataMenu-table::-webkit-scrollbar {
+    display: none;
+}
+
+.dataMenu-card {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    border: 5px solid hsl(216, 100%, 50%);
+    border-right-width: 8px;
+    border-top-width: 10px;
+    border-radius: 15px;
+    text-indent: 20px;
+    font-size: 17px;
+    margin: 10px;
+    width: 700px;
+}
+
+.dataMenu-card-buttons {
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    display: flex;
+    height: 0px;
+    gap: 5px;
+}
+
+.dataMenu-card-buttons button {
+    background-color: hsl(216, 100%, 50%);
+    justify-content: center;
+    border-radius: 15px;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    display: flex;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+
+.dataMenu-card-buttons button:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.05);
+}
+
+.dataMenu-pages {
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    border: 3px hsl(216, 100%, 50%) solid;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding-right: 30px;
+    margin-right: 90px;
+    height: 3.5rem;
+    display: flex;
+    width: 85%;
+}
+
+.dataMenu-pages ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.actual-page {
+    font-weight: 900;
+    text-decoration: underline;
+    color: hsl(216, 100%, 50%);
+}
+
+/* Formulario para borrar entradas */
+
+.delete-data {
+    transition: visibility 0s, opacity 0.3s ease;
+    background-color: hsla(0, 0%, 0%, 0.7);
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    opacity: 0;
+    left: 0;
+    top: 0;
+}
+
+.delete-data.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.delete-data-form {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    flex-direction: column;
+    translate: 0px -109px;
+    height: 10rem;
+    display: flex;
+    width: 25rem;
+    z-index: 12;
+}
+
+.delete-data-form label {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: hsl(0, 0%, 96%);
+    font-weight: bolder;
+    text-indent: 10px;
+    font-size: 22px;
+}
+
+.delete-options {
+    justify-content: space-around;
+    display: flex;
+    width: 75%;
+}
+
+.delete-options button {
+    font-size: 24px;
+    height: 2.5rem;
+    width: 8rem;
+}
+
+.delete-options button.red::before {
+    background-color: hsl(0, 68%, 50%);
+}
+
+.delete-options button.green::before {
+    background-color: hsl(118, 68%, 50%);
+}
+
+.delete-options button:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.05);
+}
+
+/* Formulario */
+
+.dataMenu-form {
+    flex-direction: column;
+    display: flex;
+    margin-right: 60px;
+}
+
+.dataMenu-form-area {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.topnav-form-buttons {
+    margin-bottom: 10px;
+    justify-content: end;
+    align-items: center;
+    display: flex;
+    gap: 30px;
+    flex-direction: row-reverse;
+}
+
+.button-panel {
+    display: flex;
+}
+
+.topnav-form-buttons button {
+    margin-right: 20px;
+    cursor: pointer;
+    border: none;
+    height: 60px;
+    width: 70px;
+}
+
+.topnav-form-buttons button:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.05);
+}
+
+.dataMenu-form-windows {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    border: 5px solid hsl(216, 100%, 50%);
+    border-radius: 5px;
+    width: 48rem;
+    overflow: hidden;
+    height: 60%;
+    position: relative;
+}
+
+.dataMenu-form-windows ul {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 0px;
+    margin-left: -45px;
+    list-style: none;
+}
+
+.dataMenu-form-windows li {
+    color: hsl(216, 100%, 50%);
+    font-weight: 900;
+    padding: 1.2rem 1rem;
+    margin-top: -20px;
+}
+
+.dataMenu-form-windows li:hover {
+    background-color: hsl(207, 44%, 49%);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.selected#main-option
+{
+    background-color:hsl(216, 100%, 50%);
+    color: white;
+}
+
+.selected#image-option
+{
+    background-color:hsl(216, 100%, 50%);
+    color: white;
+}
+
+.area-section {
+    flex-direction: column;
+    display: flex;
+}
+
+.area-section label {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: hsl(0, 0%, 96%);
+    font-weight: bolder;
+    text-indent: 10px;
+    font-size: 22px;
+}
+
+form {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
+    border: 5px solid hsl(216, 100%, 50%);
+    justify-content: center;
+    border-top-width: 25px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    align-items: center;
+    padding-top: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    width: 52rem;
+    gap: 15px;
+}
+
+#image {
+    display: none;
+}
+
+#extra {
+    display: none;
+}
+
+#image.active {
+    display: flex;
+}
+
+#image.unactive {
+    display: none;
+}
+
+#main.active {
+    display: flex;
+}
+
+#main.unactive {
+    display: none;
+}
+
+form input,
+textarea {
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    border: 5px solid hsl(39, 67%, 92%);
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 22px;
+    outline: none;
+    height: 30px;
+    width: 365px;
+    padding: 0px;
+}
+
+.row-input {
+    width: 92%;
+}
+
+.row-input input {
+    width: 98.8%;
+}
+
+input:focus {
+    border: 5px solid hsl(216, 100%, 50%);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+textarea {
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: start;
+    height: 150px;
+    resize: none;
+    width: 100%;
+}
+
+textarea:focus {
+    border: 5px solid hsl(216, 100%, 50%);
+}
+
+/* Botones */
+
+button:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.05);
+}
+
+.topnav-filter button {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+main button::before {
+    transition: left 0.2s ease-in-out;
+    background-color: hsl(207, 44%, 49%);
+    position: absolute;
+    height: 100%;
+    content: '';
+    left: -100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+}
+
+.delete::before {
+    background-color: hsl(0, 68%, 50%);
+}
+
+.edit::before {
+    background-color: hsl(118, 68%, 50%);
+}
+
+.filter-input .green::before {
+    background-color: hsl(118, 68%, 50%);
+}
+
+.green span {
+    color: hsl(0, 0%, 100%);
+}
+
+.red span {
+    color: hsl(0, 0%, 100%);
+}
+
+.filter-input .red::before {
+    background-color: hsl(0, 68%, 50%);
+}
+
+button:hover::before {
+    left: 0;
+}
+
+.gallery {
+    justify-content: start;
+    overflow: scroll;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 1rem;
+    height: 20rem;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery img {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0.5rem;
+    width: 250px;
+    height: auto;
+}
+
+@media only screen and (max-width: 1550px) {
+
+    body {
+        overflow-y: visible;
+    }
+
+    .dataMenu-form-windows {
+        height: 50px;
+        width: 30rem;
+    }
+
+    .topnav h1,
+    h4 {
+        display: none;
+    }
+
+    .topnav-filter {
+        width: 100%;
+    }
+
+    .topnav-filter-form form {
+        height: 50%;
+        width: 60%;
+        margin-left: 0;
+        margin-top: 200px;
+    }
+
+    .filter-menu label {
+        font-size: 20px;
+    }
+
+    .dataMenu {
+        flex-direction: column;
+    }
+
+    .dataMenu-table {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 80px;
+        padding-right: 0;
+    }
+
+    .dataMenu-card {
+        font-size: 15px;
+        width: 80%;
+    }
+
+    .dataMenu-card-buttons button {
+        height: 40px;
+        width: 40px;
+    }
+
+    .dataMenu-form {
+        height: 100%;
+        width: 100%;
+    }
+
+    form {
+        margin-bottom: 130px;
+        margin-top: 10px;
+        width: 900px;
+        margin: 5px;
+        gap: 20px;
+    }
+
+    form input {
+        width: 350px;
+        height: 30px;
+    }
+
+    .area-section label {
+        font-size: 18px;
+        text-indent: 0;
+    }
+
+    .topnav-menu {
+        width: 97%;
+    }
+
+    .dataMenu-pages {
+        margin-right: 0;
+    }
+
+    .buttons button {
+        font-size: 1.5rem;
+        height: 150%;
+        width: 20%;
+    }
+
+    main {
+        margin-bottom: 150px;
+    }
+
+    @media only screen and (max-width: 1280px) {
+
+        .dataMenu-table {
+            flex-direction: column;
+            padding-top: 50px;
+        }
+
+
+        .topnav-menu {
+            width: 95%;
+        }
+
+        .buttons button {
+            font-size: 1rem;
+        }
+
+        @media only screen and (max-width: 769px) {
+
+            .dataMenu-card {
+                font-size: 13px;
+                width: 80%;
+                margin-left: 0;
+            }
+
+            .dataMenu-table {
+                justify-content: start;
+                align-items: center;
+                overflow: visible;
+                padding-top: 0px;
+            }
+
+            .dataMenu-card-buttons button {
+                border-radius: 5px;
+                height: 35px;
+                width: 35px;
+            }
+
+            .topnav-form-buttons {
+                margin-bottom: 0px;
+            }
+
+            form {
+                margin-bottom: 15px;
+                flex-direction: row;
+                margin-top: 20px;
+            }
+
+            form input {
+                font-size: 20px;
+                height: 30px;
+                width: 180px;
+            }
+
+            .filter-input.buttons button {
+                font-size: 1.2rem;
+                height: 3rem;
+            }
+
+            .row-input label {
+                font-size: 15px;
+                text-indent: 0;
+            }
+
+            .dataMenu-card-data {
+                margin-top: 20px;
+                font-size: 11px;
+            }
+
+            .topnav-menu {
+                width: 9;
+            }
+
+            .dataMenu-form-area {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+
+            .dataMenu-form-windows {
+                display: none;
+            }
+
+            .gallery img {
+                width: 400px;
+            }
+
+            main {
+                margin-bottom: 90px;
+            }
+        }
+    }
+}

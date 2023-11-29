@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <!-- Codificación de carácteres -->
@@ -27,7 +27,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
     <!-- Documentos enlazados -->
-    @vite(['resources/sass/app.scss'])
+    @vite(['resources/sass/app.scss','resources/js/app.js'])
+
 </head>
 
 <body>

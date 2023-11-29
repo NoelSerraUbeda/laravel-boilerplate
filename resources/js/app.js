@@ -1,3 +1,6 @@
-import './bootstrap';
-import './menu-button.js';
-import './filter-button.js';
+import './filter.js';
+import './menu.js';
+import './save-erase.js';
+import './table.js';
+import './windows.js'
+

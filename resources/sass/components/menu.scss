@@ -1,5 +1,4 @@
 .topnav {
-
     position: relative;
     border: 8px solid hsl(216, 100%, 50%)6ff;
     background-color: hsl(240, 65%, 49%);
@@ -8,14 +7,17 @@
     border-radius: 10px;
     padding-right: 15px;
     padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
     display: flex;
     margin: 5px;
+    margin-bottom: 10px;
 }
 
 .users {
     display: flex;
-    width: 30rem;
-    gap: 15px;
+    align-items: end;
+    gap: 20px;
 }
 
 .menu-icon {
@@ -74,9 +76,8 @@
 }
 
 .topnav-menu.active {
-    height: 50rem;
+    height: 53rem;
 }
-
 
 .topnav-menu-content h4 {
     color: hsl(0, 0%, 96%);
