@@ -172,19 +172,19 @@
         <form id="main">
             <div class="area-section">
                 <label>Name</label>
-                <input id="name" type="text" value="">
+                <input id="name" type="text" data-onlyletters>
             </div>
             <div class="area-section">
                 <label>Email</label>
-                <input id="mail" type="email" value="">
+                <input id="mail" type="email" data-mail>
             </div>
             <div class="area-section">
                 <label>Password</label>
-                <input id="pass" type="password" value="">
+                <input id="pass" type="password" data-minlength="8">
             </div>
             <div class="area-section">
                 <label>Repeat Password</label>
-                <input id="repeat-pass" type="password" value="">
+                <input id="repeat-pass" type="password" data-minlength="8">
             </div>
         </form>
         <form id="image">
