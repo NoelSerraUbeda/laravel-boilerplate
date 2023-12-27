@@ -64,12 +64,11 @@
   font-weight: bolder;
   text-indent: 10px;
   padding: 10px;
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .filter-input {
   flex-direction: column;
-  margin-bottom: 1rem;
   display: flex;
   width: 80%;
 
@@ -86,6 +85,8 @@
   flex-direction: row;
   display: flex;
   width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .filter-input.buttons button {

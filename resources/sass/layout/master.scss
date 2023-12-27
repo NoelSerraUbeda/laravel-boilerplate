@@ -47,28 +47,6 @@ button:hover::before {
     left: 0;
 }
 
-.gallery {
-    justify-content: start;
-    overflow: scroll;
-    flex-wrap: wrap;
-    display: flex;
-    padding: 1rem;
-    height: 20rem;
-}
-
-.gallery::-webkit-scrollbar {
-    display: none;
-}
-
-.gallery img {
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 0.5rem;
-    width: 250px;
-    height: auto;
-}
-
 @media only screen and (max-width: 1550px) {
 
           
@@ -88,7 +66,7 @@ button:hover::before {
                 padding-bottom: 100px;
             }
         
-            .dataMenu-form-windows {
+            .crud-form-windows {
                 height: 55px;
                 width: 30rem;
             }
@@ -113,25 +91,25 @@ button:hover::before {
                 font-size: 20px;
             }
         
-            .dataMenu {
+            .crud {
                 flex-direction: column;
             }
 
-            .dataMenu-form {
+            .crud-form {
                 margin-top: 10px;
             }
 
-            .dataMenu-form form{
+            .crud-form form{
                 flex-wrap: wrap;
                 width: 25rem;
-                height: 20rem;
+                height: 30rem;
             }
 
-            .dataMenu-form input{
+            .crud-form input{
                 width: 15rem;
             }
 
-            .dataMenu-form-windows{
+            .crud-form-windows{
                 margin-top: 30px;
             }
 
@@ -139,23 +117,23 @@ button:hover::before {
                 margin-top: 30px;
             }
         
-            .dataMenu-table {
+            .crud-table {
                 justify-content: center;
                 align-items: center;
                 width: 100%;
             }
         
-            .dataMenu-card {
+            .crud-card {
                 font-size: 15px;
                 width: 25rem;
             }
         
-            .dataMenu-card-buttons button {
+            .crud-card-buttons button {
                 height: 30px;
                 width: 30px;
             }
         
-            .dataMenu-pages {
+            .crud-pages {
                 width: 25rem;
             }
         
@@ -163,6 +141,10 @@ button:hover::before {
                 font-size: 1.5rem;
                 height: 150%;
                 width: 20%;
+            }
+
+            .crud-pages{
+                display: none;
             }
         }
     }

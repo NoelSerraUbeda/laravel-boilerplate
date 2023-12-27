@@ -1,8 +1,8 @@
-.dataMenu {
+.crud {
     display: flex;
 }
 
-.dataMenu-table {
+.crud-table {
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -18,11 +18,11 @@
     padding-bottom: 2.5rem;
 }
 
-.dataMenu-table::-webkit-scrollbar {
+.crud-table::-webkit-scrollbar {
     display: none;
 }
 
-.dataMenu-card {
+.crud-card {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     background-image: linear-gradient(to bottom, #fff, #f8eedb);
     border: 5px solid hsl(216, 100%, 50%);
@@ -36,10 +36,9 @@
     margin: 10px;
     margin-bottom: 15px;
     width: 700px;
-    line-height: 1.21;
 }
 
-.dataMenu-card-buttons {
+.crud-card-buttons {
     flex-direction: row-reverse;
     margin-bottom: 20px;
     border-radius: 15px;
@@ -48,7 +47,7 @@
     gap: 5px;
 }
 
-.dataMenu-card-buttons button {
+.crud-card-buttons button {
     background-color: hsl(216, 100%, 50%);
     justify-content: center;
     border-radius: 15px;
@@ -62,12 +61,12 @@
     width: 45px;
 }
 
-.dataMenu-card-buttons button:hover {
+.crud-card-buttons button:hover {
     transition: transform 0.3s ease, color 0.3s ease;
     transform: scale(1.05);
 }
 
-.dataMenu-pages {
+.crud-pages {
     background-image: linear-gradient(to bottom, #fff, #f8eedb);
     border: 3px hsl(216, 100%, 50%) solid;
     justify-content: space-between;
@@ -79,12 +78,12 @@
     display: flex;
     position: absolute;
     align-items: center;
-    top: 850;
+    bottom: 0;
     z-index: 5;
     width: 54rem;
 }
 
-.dataMenu-pages ul {
+.crud-pages ul {
     display: flex;
     gap: 10px;
     list-style: none;

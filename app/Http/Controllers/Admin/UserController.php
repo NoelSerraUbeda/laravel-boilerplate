@@ -89,7 +89,8 @@ class UserController extends Controller
 
             $view = View::make('admin.users.index')
                 ->with('users', $users)
-                ->with('user', $user)
+                ->with('user', $this->user)
+                ->with('message', $message)
                 ->renderSections();        
 
             return response()->json([
@@ -107,9 +108,14 @@ class UserController extends Controller
     public function edit(User $user)
     {
         try{
+
+            $users = $this->user
+            ->orderBy('created_at', 'desc')
+            ->paginate(10); 
+
             $view = View::make('admin.users.index')
             ->with('user', $user)
-            ->with('users', $this->user->where('active', 1)->get());   
+            ->with('users', $users);   
             
             if(request()->ajax()) {
 
@@ -142,7 +148,8 @@ class UserController extends Controller
             
             $view = View::make('admin.users.index')
                 ->with('user', $this->user)
-                ->with('users', $this->user->where('active', 1)->get())
+                ->with('users', $users)
+                ->with('message', $message)
                 ->renderSections();
             
             return response()->json([

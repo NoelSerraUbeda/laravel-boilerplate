@@ -1,17 +1,17 @@
-.dataMenu-form {
+.crud-form {
     flex-direction: column;
     display: flex;
     margin-right: 30px;
 }
 
-.dataMenu-form-area {
+.crud-form-area {
     justify-content: center;
     flex-direction: column;
     align-items: center;
     display: flex;
 }
 
-.dataMenu-form-buttons{
+.crud-form-buttons{
     display: flex;
 }
 
@@ -43,7 +43,7 @@
     transform: scale(1.05);
 }
 
-.dataMenu-form-windows {
+.crud-form-windows {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
     border: 5px solid hsl(216, 100%, 50%);
@@ -54,19 +54,19 @@
     height: 3.5rem;
 }
 
-.dataMenu-form-windows ul {
+.crud-form-windows ul {
     display: flex;
     list-style: none;
 }
 
-.dataMenu-form-windows li {
+.crud-form-windows li {
     color: hsl(216, 100%, 50%);
     padding: 1.2rem 1rem;
     font-weight: 900;
     margin-top: -16px;
 }
 
-.dataMenu-form-windows li:hover {
+.crud-form-windows li:hover {
     background-color: hsl(207, 44%, 49%);
     color: whitesmoke;
     cursor: pointer;
@@ -146,7 +146,7 @@ textarea {
     border-radius: 15px;
     text-align: center;
     margin-top: 5px;
-    font-size: 26px;
+    font-size: 22px;
     outline: none;
     width: 365px;
     padding: 0.5rem;

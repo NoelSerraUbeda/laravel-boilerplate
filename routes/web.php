@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('admin.events.index');
 // });
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin'], function () {
 
   Route::resource('idiomas', 'App\Http\Controllers\Admin\LanguageController', [
     'parameters' => [

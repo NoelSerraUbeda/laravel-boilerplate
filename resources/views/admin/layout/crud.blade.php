@@ -1,14 +1,14 @@
 @extends('admin.layout.master')
 
 @section('content')
-    <div class="dataMenu">
-            <div class="dataMenu-table">
-                @yield('table')
-            </div>
+    <div class="crud">
+        <div class="crud-table table">
+            @yield('table')
+        </div>
 
-            <div class="dataMenu-form">
-                @yield('form')
-            </div>
+        <div class="crud-form form">
+            @yield('form')
+        </div>
     </div>
 @endsection
  

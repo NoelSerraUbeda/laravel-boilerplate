@@ -14,7 +14,6 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
     use SoftDeletes;
 
-    protected $timestamps = true;
     protected $guarded = [];
     protected $dates = ['deleted_at']; 
 
