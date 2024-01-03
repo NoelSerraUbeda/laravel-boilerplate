@@ -32,7 +32,9 @@
     </head>
 
     <body>
+        @component('admin.components.delete-form')@endcomponent
         @include('admin.layout.partials.header')
+        
         <main>
             @yield('content')
         </main>

@@ -4,10 +4,6 @@
     @component('admin.components.table-filter')
     @endcomponent
     <div class="crud-table">
-        <div class="delete-data">
-            @component('admin.components.delete-form')
-            @endcomponent
-        </div>
         <div class="card-section">
             @foreach($users as $user_element)
                 <div class="crud-card">
@@ -80,6 +76,7 @@
 
     <div class="crud-form-area">
         <form class="admin-form" id="main">
+            <input type="form" name="id" value="">
             <div class="area-section">
                 <label>Name</label>
                 <input id="name" name="name" type="text" autocomplete="name" value="{{$user->name ?? ''}}">

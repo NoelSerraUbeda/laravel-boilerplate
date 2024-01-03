@@ -1,14 +1,8 @@
 .crud-form {
     flex-direction: column;
     display: flex;
-    margin-right: 30px;
-}
 
-.crud-form-area {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
+    margin-right: 30px;
 }
 
 .crud-form-buttons{
@@ -33,7 +27,6 @@
 }
 
 .button-panel svg{
-
     height: 60px;
     width: 60px;
 }
@@ -183,6 +176,10 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+input[type=form] {
+    display: none;
+}
+
 textarea {
     padding: 10px;
     box-sizing: border-box;
@@ -233,6 +230,7 @@ textarea:focus {
     z-index: 12;
 }
 
+
 .delete-data-form label {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: hsl(0, 0%, 96%);
@@ -258,7 +256,7 @@ textarea:focus {
     background-color: hsl(0, 68%, 50%);
 }
 
-.delete-options button.green::before {
+.confirmation-button.green::before {
     background-color: hsl(118, 68%, 50%);
 }
 
