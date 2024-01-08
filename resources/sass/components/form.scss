@@ -230,6 +230,13 @@ textarea:focus {
     z-index: 12;
 }
 
+.delete-data-form button {
+    background-color: hsl(216, 100%, 50%);
+    border-radius: 15px;
+    color:white;
+    width: 100%;
+}
+
 
 .delete-data-form label {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -252,11 +259,11 @@ textarea:focus {
     width: 8rem;
 }
 
-.delete-options button.red::before {
+.cancel-button button:hover {
     background-color: hsl(0, 68%, 50%);
 }
 
-.confirmation-button.green::before {
+.confirmation-button button:hover {
     background-color: hsl(118, 68%, 50%);
 }
 
