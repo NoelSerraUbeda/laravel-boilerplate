@@ -64,32 +64,3 @@
     transition: transform 0.3s ease, color 0.3s ease;
     transform: scale(1.05);
 }
-
-.crud-pages {
-    background-image: linear-gradient(to bottom, #fff, #f8eedb);
-    border: 3px hsl(216, 100%, 50%) solid;
-    justify-content: space-between;
-    border-radius: 15px;
-    padding-right: 30px;
-    padding-left: 30px;
-    margin-left: 15px;
-    height: 3.5rem;
-    display: flex;
-    position: absolute;
-    align-items: center;
-    bottom: 0;
-    z-index: 5;
-    width: 54rem;
-}
-
-.crud-pages ul {
-    display: flex;
-    gap: 10px;
-    list-style: none;
-}
-
-.actual-page {
-    font-weight: 900;
-    text-decoration: underline;
-    color: hsl(216, 100%, 50%);
-}
