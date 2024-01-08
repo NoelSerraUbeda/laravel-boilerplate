@@ -36,11 +36,14 @@
 
     <div class="crud-pages">
         <ul>
+            <li class="prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-left-bold-box</title><path d="M21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5M7,12L12,17V14H16V10H12V7L7,12Z" /></svg></li>
             <li class="actual-page">1</li>
             <li>2</li>
             <li>3</li>
+            <li>4</li>
             <li>...</li>
             <li>20</li>
+            <li class="next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-bold-box</title><path d="M3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19M17,12L12,7V10H8V14H12V17L17,12Z" /></svg></li>
         </ul>
         <p>0{{__('admin/pagination.total')}}</p>
     </div>    

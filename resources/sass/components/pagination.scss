@@ -19,6 +19,13 @@
     display: flex;
     gap: 10px;
     list-style: none;
+    align-items: center;
+}
+
+ul svg {
+    width: 2.5rem;
+    cursor: pointer;
+    fill: hsl(216, 100%, 50%);
 }
 
 .actual-page {

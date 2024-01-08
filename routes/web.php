@@ -73,3 +73,4 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 // require __DIR__.'/auth.php';
+
