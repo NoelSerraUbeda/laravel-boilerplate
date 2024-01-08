@@ -46,8 +46,13 @@ class UserController extends Controller
     {
         try {
 
+            $users = $this->user
+                ->orderBy('created_at','desc')
+                ->paginate(10);
+
             $view = View::make('admin.users.index')
                 ->with('user', $this->user)
+                ->with('users', $users)
                 ->renderSections();
 
             return response()->json([
@@ -56,7 +61,7 @@ class UserController extends Controller
 
         } catch (\Exception $e) {
             return response()->json([
-                'message' =>  \Lang::get('admin/notification.error'),
+                'message' =>  $e->getMessage(),
             ], 500);
         }
     }
