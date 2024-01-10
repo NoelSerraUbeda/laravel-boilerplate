@@ -89,31 +89,31 @@
             <input name="id" type="hidden" value="{{$event->id ?? ''}}">
             <div class="area-section">
                 <label>Name</label>
-                <input id="name" name="name" type="text" autocomplete="name" value="{{$event->name ?? ''}}">
+                <input class="long" id="name" name="name" type="text" autocomplete="name" value="{{$event->name ?? ''}}">
             </div>
             <div class="area-section">
-                <label>Place</label>
-                <input id="place" name="email" type="text" autocomplete="name" value="{{$event->place ?? ''}}">
+                <label>Adress</label>
+                <input id="address" name="address" type="text" autocomplete="name" value="{{$event->address ?? ''}}">
             </div>
             <div class="area-section">
                 <label>Price</label>
-                <input id="price" name="email" type="text" autocomplete="name" value="{{$event->price ?? ''}}">
+                <input id="price" name="price" type="text" autocomplete="name" value="{{$event->price ?? '0'}}">
             </div>
             <div class="area-section">
                 <label>Start Date</label>
-                <input id="start_date" name="date" type="date" autocomplete="name" value="{{$event->start_date ?? ''}}">
+                <input id="start_date" name="startDate" type="date" autocomplete="name" value="{{$event->startDate ?? ''}}">
             </div>
             <div class="area-section">
                 <label>End Date</label>
-                <input id="end_date" name="date" type="date" autocomplete="name" value="{{$event->end_date ?? ''}}">
+                <input id="end_date" name="endDate" type="date" autocomplete="name" value="{{$event->endDate ?? ''}}">
             </div>
             <div class="area-section">
                 <label>Start Time</label>
-                <input id="start_date" name="date" type="date" autocomplete="name" value="{{$event->start_time ?? ''}}">
+                <input id="start_date" name="startTime" type="time" autocomplete="name" value="{{$event->startTime ?? ''}}">
             </div>
             <div class="area-section">
                 <label>End Time</label>
-                <input id="end_date" name="date" type="date" autocomplete="name" value="{{$event->end_time ?? ''}}">
+                <input id="end_date" name="endTime" type="time" autocomplete="name" value="{{$event->endTime ?? ''}}">
             </div>
         </form>
         <form id="image">
