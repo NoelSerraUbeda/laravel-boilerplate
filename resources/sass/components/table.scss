@@ -64,3 +64,44 @@
     transition: transform 0.3s ease, color 0.3s ease;
     transform: scale(1.05);
 }
+
+.delete::before {
+    background-color: hsl(0, 68%, 50%);
+}
+
+.edit::before {
+    background-color: hsl(118, 68%, 50%);
+}
+
+@media only screen and (max-width: 769px) {
+
+    .crud-table {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .crud-card {
+        font-size: 15px;
+        width: 25rem;
+    }
+
+    .crud-card-buttons button {
+        height: 30px;
+        width: 30px;
+    }
+
+    .crud-pages {
+        width: 25rem;
+    }
+
+    .buttons button {
+        font-size: 1.5rem;
+        height: 150%;
+        width: 20%;
+    }
+
+    .crud-pages {
+        display: none;
+    }
+}

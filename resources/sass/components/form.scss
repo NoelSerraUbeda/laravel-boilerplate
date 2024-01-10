@@ -197,3 +197,33 @@ textarea {
 textarea:focus {
     border: 5px solid hsl(216, 100%, 50%);
 }
+
+@media only screen and (max-width: 769px) {
+
+        .crud-form {
+            margin-top: 10px;
+        }
+
+        .crud-form form {
+            flex-wrap: wrap;
+            width: 90%;
+            height: 100%;
+        }
+
+        .crud-form input {
+            width: 22rem;
+        }
+
+        .crud-form-windows {
+            margin-top: 30px;
+        }
+
+        .crud-form-area {
+            justify-content: start;
+            align-items: start;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-left: -40px;
+        }
+    }

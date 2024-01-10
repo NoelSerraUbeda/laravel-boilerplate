@@ -19,14 +19,6 @@ main button::before {
     top: 0;
 }
 
-.delete::before {
-    background-color: hsl(0, 68%, 50%);
-}
-
-.edit::before {
-    background-color: hsl(118, 68%, 50%);
-}
-
 .filter-input .green::before {
     background-color: hsl(118, 68%, 50%);
 }
@@ -49,103 +41,46 @@ button:hover::before {
 
 @media only screen and (max-width: 1550px) {
 
-          
+
     .topnav h1,
     h4 {
         display: none;
     }
 
-    @media only screen and (max-width: 1280px) {
+    @media only screen and (max-width: 769px) {
 
-        
+        body {
+            overflow-y: visible;
+            padding-bottom: 100px;
+        }
 
-        @media only screen and (max-width: 769px) {
+        .crud-form-windows {
+            height: 55px;
+            width: 30rem;
+        }
 
-            body {
-                overflow-y: visible;
-                padding-bottom: 100px;
-            }
-        
-            .crud-form-windows {
-                height: 55px;
-                width: 30rem;
-            }
-        
-            .topnav h1,
-            h4 {
-                display: none;
-            }
-        
-            .topnav-menu {
-                width: 27.5rem;
-            }
-        
-            .topnav-filter-form form {
-                height: 50%;
-                width: 60%;
-                margin-left: 0;
-                margin-top: 200px;
-            }
-        
-            .filter-menu label {
-                font-size: 20px;
-            }
-        
-            .crud {
-                flex-direction: column;
-            }
+        .topnav-menu {
+            width: 27.5rem;
+        }
 
-            .crud-form {
-                margin-top: 10px;
-            }
+        .topnav-filter-form form {
+            height: 50%;
+            width: 60%;
+            margin-left: 0;
+            margin-top: 200px;
+        }
 
-            .crud-form form{
-                flex-wrap: wrap;
-                width: 25rem;
-                height: 30rem;
-            }
+        .filter-menu label {
+            font-size: 20px;
+        }
 
-            .crud-form input{
-                width: 15rem;
-            }
+        .crud {
+            flex-direction: column;
+        }
 
-            .crud-form-windows{
-                margin-top: 30px;
-            }
-
-            .button-panel  {
-                margin-top: 30px;
-            }
-        
-            .crud-table {
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-            }
-        
-            .crud-card {
-                font-size: 15px;
-                width: 25rem;
-            }
-        
-            .crud-card-buttons button {
-                height: 30px;
-                width: 30px;
-            }
-        
-            .crud-pages {
-                width: 25rem;
-            }
-        
-            .buttons button {
-                font-size: 1.5rem;
-                height: 150%;
-                width: 20%;
-            }
-
-            .crud-pages{
-                display: none;
-            }
+        .button-panel {
+            margin-top: 30px;
         }
     }
+
 }

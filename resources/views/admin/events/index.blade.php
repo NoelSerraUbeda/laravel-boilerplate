@@ -24,12 +24,12 @@
                         </div>
                         <div class="crud-card-data">
                             <h3>Nombre: <span>{{$event_element->name}}</span></h3>
-                            <h3>Dirección: <span>{{$event_element->place}}</span></h3>
+                            <h3>Dirección: <span>{{$event_element->address}}</span></h3>
                             <h3>Precio: <span>{{$event_element->price}}</span></h3>
-                            <h3>Fecha de inicio: <span>{{$event_element->start_date}}</span></h3>
-                            <h3>Fecha de fin: <span>{{$event_element->end_date}}</span></h3>
-                            <h3>Tiempo de inicio: <span>{{$event_element->start_time}}</span></h3>
-                            <h3>Tiempo de fin: <span>{{$event_element->end_time}}</span></h3>
+                            <h3>Fecha de inicio: <span>{{$event_element->startDate}}</span></h3>
+                            <h3>Fecha de fin: <span>{{$event_element->endDate}}</span></h3>
+                            <h3>Tiempo de inicio: <span>{{$event_element->startTime}}</span></h3>
+                            <h3>Tiempo de fin: <span>{{$event_element->endTime}}</span></h3>
                             <h3>Creado el: <span>{{$event_element->created_at}}</span></h3>
                             <h3>Actualizado el: <span>{{$event_element->updated_at}}</span></h3>
                         </div>
@@ -92,7 +92,7 @@
                 <input class="long" id="name" name="name" type="text" autocomplete="name" value="{{$event->name ?? ''}}">
             </div>
             <div class="area-section">
-                <label>Adress</label>
+                <label>Address</label>
                 <input id="address" name="address" type="text" autocomplete="name" value="{{$event->address ?? ''}}">
             </div>
             <div class="area-section">
