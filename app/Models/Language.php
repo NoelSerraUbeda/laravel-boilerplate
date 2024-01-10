@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Model;
 
-class Event extends Model
+class Language extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
     use SoftDeletes;
