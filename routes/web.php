@@ -28,6 +28,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'admin'], function () {
 
+  Route::resource('faq', 'App\Http\Controllers\Admin\FaqController', [
+    'parameters' => [
+      'faqs' => 'faq', 
+    ],
+    'names' => [
+      'index' => 'faqs',
+      'create' => 'faqs_create',
+      'edit' => 'faqs_edit',
+      'store' => 'faqs_store',
+      'destroy' => 'faqs_destroy',
+    ]
+  ]);
+
   Route::resource('idiomas', 'App\Http\Controllers\Admin\LanguageController', [
     'parameters' => [
       'idiomas' => 'language', 
