@@ -32,5 +32,13 @@
         <div class="topnav-menu-content">
             <a href="https://dev-laravel.com/admin/idiomas"><h4>Panel de Idiomas</h4></a>
         </div>
+        <div class="topnav-menu-content">
+            <a href=""><h4>Panel de Faqs</h4></a>
+        </div>
+        <div class="topnav-menu-content">
+            <a href=""><h4>Panel de Compañias</h4></a>
+        </div>
+        
+        
     </div>
 </header>

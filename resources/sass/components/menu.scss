@@ -67,19 +67,26 @@
     left: 10px;
     top: 0px;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    gap: 0;
     align-items: start;
 }
 
 .topnav-menu-content {
     z-index: 999;
-    margin: 8rem 8rem 0 8rem;
+    margin: 6rem 0rem 0 5rem;
     background-color: lightblue;
-    max-width: 10rem;
+    width: 10rem;
+    height:3rem;
     padding: 1rem;
     border-radius: 1rem;
     border: 3px hsl(211, 100%, 50%) solid;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .topnav-menu-content a {
@@ -95,11 +102,11 @@
 
 .topnav-menu.active {
     height: 55rem;
-
 }
 
 .topnav-menu-content h4 {
     color: hsl(211, 100%, 50%);
+    font-size: 20px;
 }
 
 .topnav-menu-content-card {
