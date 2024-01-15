@@ -23,22 +23,31 @@
         </nav>
     </div>
     <div class="topnav-menu">
-        <div class="topnav-menu-content">
-            <a href="https://dev-laravel.com/admin/usuarios"><h4>Panel de Usuarios</h4></a>
-        </div>
-        <div class="topnav-menu-content">
-            <a href="https://dev-laravel.com/admin/eventos"><h4>Panel de Eventos</h4></a>
-        </div>
-        <div class="topnav-menu-content">
-            <a href="https://dev-laravel.com/admin/idiomas"><h4>Panel de Idiomas</h4></a>
-        </div>
-        <div class="topnav-menu-content">
-            <a href="https://dev-laravel.com/admin/faq"><h4>Panel de Faqs</h4></a>
-        </div>
-        <div class="topnav-menu-content">
-            <a href=""><h4>Perfiles de Negocio</h4></a>
-        </div>
-        
+        <a href="https://dev-laravel.com/admin/usuarios">
+            <div class="topnav-menu-content">
+                <h4>Panel de Usuarios</h4>
+            </div>
+        </a>
+        <a href="https://dev-laravel.com/admin/eventos">
+            <div class="topnav-menu-content">
+                <h4>Panel de Eventos</h4>
+            </div>
+        </a>
+        <a href="https://dev-laravel.com/admin/idiomas">
+            <div class="topnav-menu-content">
+                <h4>Panel de Idiomas</h4>
+            </div>
+        </a>
+        <a href="https://dev-laravel.com/admin/faq">
+            <div class="topnav-menu-content">
+                <h4>Panel de Faqs</h4>
+            </div>
+        </a>
+        <a href="https://dev-laravel.com/admin/negocios">
+            <div class="topnav-menu-content">
+                <h4>Perfiles de Negocio</h4>
+            </div>
+        </a>
         
     </div>
 </header>

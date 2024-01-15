@@ -28,9 +28,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'admin'], function () {
 
+  Route::resource('negocios', 'App\Http\Controllers\Admin\BusinessProfileController', [
+    'parameters' => [
+      'negocios' => 'businessProfile', 
+    ],
+    'names' => [
+      'index' => 'businessProfiles',
+      'create' => 'businessProfiles_create',
+      'edit' => 'businessProfiles_edit',
+      'store' => 'businessProfiles_store',
+      'destroy' => 'businessProfiles_destroy',
+    ]
+  ]);
+
   Route::resource('faq', 'App\Http\Controllers\Admin\FaqController', [
     'parameters' => [
-      'faqs' => 'faq', 
+      'faqs' => 'faqs', 
     ],
     'names' => [
       'index' => 'faqs',
