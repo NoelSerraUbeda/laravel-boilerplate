@@ -80,6 +80,7 @@
 .area-section {
     flex-direction: column;
     display: flex;
+    max-width: 60rem;
 }
 
 .area-section label {
@@ -132,6 +133,8 @@ form {
     display: none;
 }
 
+
+
 form input,
 textarea {
     background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
@@ -141,14 +144,37 @@ textarea {
     margin-top: 5px;
     font-size: 22px;
     outline: none;
-    width: 365px;
+    width: 21rem;
     padding: 0.5rem;
 }
+
+select {
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    border: 5px solid hsl(39, 67%, 92%);
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 22px;
+    outline: none;
+    width: 23rem;
+    padding: 0.5rem;
+    margin-left: -1rem;
+}
+
+
+
+option {
+    color: white;
+    background-color: hsl(211, 100%, 50%);
+    height: 4rem;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
 
 .long {
     width: 48rem;
 }
-
 
 .filter-menu input,
 textarea {

@@ -24,12 +24,10 @@
                         </div>
                         <div class="crud-card-data">
                             <h3>Nombre: <span>{{$event_element->name}}</span></h3>
+                            <h3>Poblacion: <span>{{$event_element->town_id}}</span></h3>
                             <h3>Dirección: <span>C/{{$event_element->address}}</span></h3>
                             <h3>Precio: <span>{{$event_element->price}} €</span></h3>
-                            <h3>Fecha de inicio: <span>{{$event_element->startDate}}</span></h3>
-                            <h3>Fecha de fin: <span>{{$event_element->endDate}}</span></h3>
-                            <h3>Tiempo de inicio: <span>{{$event_element->startTime}}</span></h3>
-                            <h3>Tiempo de fin: <span>{{$event_element->endTime}}</span></h3>
+                            <h3>Fecha de inicio: <span>{{$event_element->start_date}}</span></h3>
                             <h3>Creado el: <span>{{$event_element->created_at}}</span></h3>
                             <h3>Actualizado el: <span>{{$event_element->updated_at}}</span></h3>
                         </div>
@@ -89,7 +87,16 @@
             <input name="id" type="hidden" value="{{$event->id ?? ''}}">
             <div class="area-section">
                 <label>Name</label>
-                <input class="long" id="name" name="name" type="text" autocomplete="name" value="{{$event->name ?? ''}}">
+                <input id="name" name="name" type="text" autocomplete="name" value="{{$event->name ?? ''}}">
+            </div><br>
+            <div class="area-section">
+                <label>Poblacion</label>
+                <select id="town_id" name="town_id">
+                    <option value="" disabled selected></option>
+                    @foreach($towns as $town)
+                        <option value="{{$town->id}}" {{ $town->id == $event->town_id ? 'selected' : ''}}>{{$town->name}}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="area-section">
                 <label>Address</label>
@@ -101,19 +108,19 @@
             </div>
             <div class="area-section">
                 <label>Start Date</label>
-                <input id="start_date" name="startDate" type="date" autocomplete="name" value="{{$event->startDate ?? ''}}">
+                <input id="start_date" name="start_date" type="date" autocomplete="name" value="{{$event->start_date ?? ''}}">
             </div>
             <div class="area-section">
                 <label>End Date</label>
-                <input id="end_date" name="endDate" type="date" autocomplete="name" value="{{$event->endDate ?? ''}}">
+                <input id="end_date" name="end_date" type="date" autocomplete="name" value="{{$event->end_date ?? ''}}">
             </div>
             <div class="area-section">
                 <label>Start Time</label>
-                <input id="start_date" name="startTime" type="time" autocomplete="name" value="{{$event->startTime ?? ''}}">
+                <input id="start_date" name="start_time" type="time" autocomplete="name" value="{{$event->start_time ?? ''}}">
             </div>
             <div class="area-section">
                 <label>End Time</label>
-                <input id="end_date" name="endTime" type="time" autocomplete="name" value="{{$event->endTime ?? ''}}">
+                <input id="end_date" name="end_time" type="time" autocomplete="name" value="{{$event->end_time ?? ''}}">
             </div>
         </form>
         <form id="image">
