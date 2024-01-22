@@ -28,13 +28,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
         <!-- Documentos enlazados -->
-        @vite(['resources/sass/admin-app.scss','resources/js/admin-app.js'])
+        @vite(['resources/sass/auth-app.scss'])
     </head>
 
-    <body>
-        @component('admin.components.delete-form')@endcomponent
-        @include('admin.layout.partials.header')
-        
+    <body>        
         <main>
             @yield('content')
         </main>

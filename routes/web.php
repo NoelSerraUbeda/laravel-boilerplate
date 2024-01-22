@@ -14,59 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/admin/usuarios', function () {
-//     return view('admin.users.index');
-// });
-
-// Route::get('/admin/eventos', function () {
-//     return view('admin.events.index');
-// });
-
-Route::group(['prefix' => 'admin'], function () {
-
-  Route::resource('negocios', 'App\Http\Controllers\Admin\BusinessProfileController', [
-    'parameters' => [
-      'negocios' => 'businessProfile', 
-    ],
-    'names' => [
-      'index' => 'businessProfiles',
-      'create' => 'businessProfiles_create',
-      'edit' => 'businessProfiles_edit',
-      'store' => 'businessProfiles_store',
-      'destroy' => 'businessProfiles_destroy',
-    ]
-  ]);
-
-  Route::resource('faq', 'App\Http\Controllers\Admin\FaqController', [
-    'parameters' => [
-      'faqs' => 'faqs', 
-    ],
-    'names' => [
-      'index' => 'faqs',
-      'create' => 'faqs_create',
-      'edit' => 'faqs_edit',
-      'store' => 'faqs_store',
-      'destroy' => 'faqs_destroy',
-    ]
-  ]);
-
-  Route::resource('idiomas', 'App\Http\Controllers\Admin\LanguageController', [
-    'parameters' => [
-      'idiomas' => 'language', 
-    ],
-    'names' => [
-      'index' => 'languages',
-      'create' => 'languages_create',
-      'edit' => 'languages_edit',
-      'store' => 'languages_store',
-      'destroy' => 'languages_destroy',
-    ]
-  ]);
-
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+    
   Route::resource('usuarios', 'App\Http\Controllers\Admin\UserController', [
     'parameters' => [
       'usuarios' => 'user', 
@@ -93,10 +42,48 @@ Route::group(['prefix' => 'admin'], function () {
     ]
   ]);
 
+  Route::resource('negocios', 'App\Http\Controllers\Admin\BusinessProfileController', [
+    'parameters' => [
+      'negocios' => 'businessProfile', 
+    ],
+    'names' => [
+      'index' => 'businessProfiles',
+      'create' => 'businessProfiles_create',
+      'edit' => 'businessProfiles_edit',
+      'store' => 'businessProfiles_store',
+      'destroy' => 'businessProfiles_destroy',
+    ]
+  ]);
+    
+  Route::resource('faq', 'App\Http\Controllers\Admin\FaqController', [
+    'parameters' => [
+      'faqs' => 'faqs', 
+    ],
+    'names' => [
+      'index' => 'faqs',
+      'create' => 'faqs_create',
+      'edit' => 'faqs_edit',
+      'store' => 'faqs_store',
+      'destroy' => 'faqs_destroy',
+    ]
+  ]);
+
+  Route::resource('idiomas', 'App\Http\Controllers\Admin\LanguageController', [
+    'parameters' => [
+      'idiomas' => 'language', 
+    ],
+    'names' => [
+      'index' => 'languages',
+      'create' => 'languages_create',
+      'edit' => 'languages_edit',
+      'store' => 'languages_store',
+      'destroy' => 'languages_destroy',
+    ]
+  ]);
+
   Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
   Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
   Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// require __DIR__.'/auth.php';
-
+require __DIR__.'/auth.php';
