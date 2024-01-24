@@ -1,29 +1,24 @@
-export default (() => {
-    const tabs = document.querySelector('.tabs');
-    tabs?.addEventListener("click", (event) => {
-        
-        // Si tabs ha sido pulsado
-        if (event.target.closest('.tab')) {
-            
-            // Asignar cada tab a su contenido
-            const tab = event.target.closest('.tab');
+const handleTabClick = (containerSelector, contentSelector) => {
+    const container = document.querySelector(containerSelector);
+    container?.addEventListener("click", (event) => {
+        const tab = event.target.closest('.tab');
+        if (tab) {
             const tabContentId = tab.getAttribute('data-tab');
-            const targetTabContent = document.querySelector(`.tab-content[data-tab="${tabContentId}"]`);
-            
-            // Esconde el resto de contenidos que no son el seleccionado
-            document.querySelectorAll('.tab-content').forEach(content => {
+            const targetTabContent = document.querySelector(`${contentSelector}[data-tab="${tabContentId}"]`);
+
+            document.querySelectorAll(contentSelector).forEach(content => {
                 content.classList.remove('active');
             });
 
-            // Hacer visible el contenido seleccionado
             targetTabContent.classList.add('active');
-            tabs.querySelectorAll('.tab').forEach(tab => {
+            container.querySelectorAll('.tab').forEach(tab => {
                 tab.classList.remove('selected');
             });
 
-            // Y marcar como selecionada la tab elegida
             tab.classList.add('selected');
         }
     });
+};
 
-})();
+handleTabClick('.tabs', '.tab-content');
+handleTabClick('.language-tabs .tabs', '.area');

@@ -123,19 +123,31 @@
                     <label>End Time</label>
                     <input id="end_date" name="end_time" type="time" autocomplete="name" value="{{$event->end_time ?? ''}}">
                 </div>
-                <div class="crud-form-windows-language">
-                    <ul>
-                        <li id="main-option" class="selected">ES</li>
-                        <li id="image-option">EN</li>
+                <div class="language-tabs">
+                    <ul class="tabs">
+                        <li id="main-option" class="tab selected" data-tab="es">ES</li>
+                        <li id="image-option" class="tab" data-tab="en">EN</li>
                     </ul>
                 </div>
-                <div class="area-section">
-                    <label>Name</label>
-                    <input type="text" class="long">
+                <div class="area active" data-tab="es">
+                    <div class="area-section">
+                        <label>Name</label>
+                        <input type="text" class="long">
+                    </div>
+                    <div class="area-section ">
+                        <label>Description</label>
+                        <textarea></textarea>
+                    </div>
                 </div>
-                <div class="area-section">
-                    <label>Description</label>
-                    <textarea class="long"></textarea>
+                <div class="area" data-tab="en">
+                    <div class="area-section">
+                        <label>Name</label>
+                        <input type="text" class="long">
+                    </div>
+                    <div class="area-section">
+                        <label>Description</label>
+                        <textarea></textarea>
+                    </div>
                 </div>
             </div>
             <div class="tab-content custom-file-input" data-tab="images">
@@ -148,3 +160,4 @@
     </div>
 
 @endsection
+
