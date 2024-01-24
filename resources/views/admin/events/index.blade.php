@@ -56,10 +56,10 @@
 @section('form')
 
     <div class="crud-form-buttons">
-        <div class="crud-form-windows">
+        <div class="crud-form-windows tabs">
             <ul>
-                <li id="main-option" class="selected">Principal</li>
-                <li id="image-option">Imágenes</li>
+                <li id="main-option" class="tab selected" data-tab="general">Principal</li>
+                <li id="image-option" class="tab" data-tab="images">Imágenes</li>
             </ul>
         </div>
         <div class="button-panel">
@@ -83,48 +83,67 @@
     </div>
 
     <div class="crud-form-area">
-        <form class="admin-form" id="main">
-            <input name="id" type="hidden" value="{{$event->id ?? ''}}">
-            <div class="area-section">
-                <label>Name</label>
-                <input id="name" name="name" type="text" autocomplete="name" value="{{$event->name ?? ''}}">
-            </div><br>
-            <div class="area-section">
-                <label>Poblacion</label>
-                <select id="town_id" name="town_id">
-                    <option value="" disabled selected></option>
-                    @foreach($towns as $town)
-                        <option value="{{$town->id}}" {{ $town->id == $event->town_id ? 'selected' : ''}}>{{$town->name}}</option>
-                    @endforeach
-                </select>
+        <form>
+            <div class="tab-content event-form active" data-tab="general">
+                <input name="id" type="hidden" value="{{$event->id ?? ''}}">
+                <div class="area-section">
+                    <label>Name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" value="{{$event->name ?? ''}}">
+                </div><br>
+                <div class="area-section">
+                    <label>Poblacion</label>
+                    <select id="town_id" name="town_id">
+                        <option value="" disabled selected></option>
+                        @foreach($towns as $town)
+                            <option value="{{$town->id}}" {{ $town->id == $event->town_id ? 'selected' : ''}}>{{$town->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="area-section">
+                    <label>Address</label>
+                    <input id="address" name="address" type="text" autocomplete="name" value="{{$event->address ?? ''}}">
+                </div>
+                <div class="area-section">
+                    <label>Price</label>
+                    <input id="price" name="price" type="text" autocomplete="name" value="{{$event->price ?? '0'}}">
+                </div>
+                <div class="area-section">
+                    <label>Start Date</label>
+                    <input id="start_date" name="start_date" type="date" autocomplete="name" value="{{$event->start_date ?? ''}}">
+                </div>
+                <div class="area-section">
+                    <label>End Date</label>
+                    <input id="end_date" name="end_date" type="date" autocomplete="name" value="{{$event->end_date ?? ''}}">
+                </div>
+                <div class="area-section">
+                    <label>Start Time</label>
+                    <input id="start_date" name="start_time" type="time" autocomplete="name" value="{{$event->start_time ?? ''}}">
+                </div>
+                <div class="area-section">
+                    <label>End Time</label>
+                    <input id="end_date" name="end_time" type="time" autocomplete="name" value="{{$event->end_time ?? ''}}">
+                </div>
+                <div class="crud-form-windows-language">
+                    <ul>
+                        <li id="main-option" class="selected">ES</li>
+                        <li id="image-option">EN</li>
+                    </ul>
+                </div>
+                <div class="area-section">
+                    <label>Name</label>
+                    <input type="text" class="long">
+                </div>
+                <div class="area-section">
+                    <label>Description</label>
+                    <textarea class="long"></textarea>
+                </div>
             </div>
-            <div class="area-section">
-                <label>Address</label>
-                <input id="address" name="address" type="text" autocomplete="name" value="{{$event->address ?? ''}}">
+            <div class="tab-content custom-file-input" data-tab="images">
+                <div class="form-section">
+                    <label for="avatar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-document-plus</title><path d="M14 2H6C4.89 2 4 2.89 4 4V20C4 21.11 4.89 22 6 22H13.81C13.28 21.09 13 20.05 13 19C13 18.67 13.03 18.33 13.08 18H6V16H13.81C14.27 15.2 14.91 14.5 15.68 14H6V12H18V13.08C18.33 13.03 18.67 13 19 13S19.67 13.03 20 13.08V8L14 2M13 9V3.5L18.5 9H13M18 15V18H15V20H18V23H20V20H23V18H20V15H18Z" /></svg></label>
+                    <input id="avatar" type="file" accept="image">
+                </div>
             </div>
-            <div class="area-section">
-                <label>Price</label>
-                <input id="price" name="price" type="text" autocomplete="name" value="{{$event->price ?? '0'}}">
-            </div>
-            <div class="area-section">
-                <label>Start Date</label>
-                <input id="start_date" name="start_date" type="date" autocomplete="name" value="{{$event->start_date ?? ''}}">
-            </div>
-            <div class="area-section">
-                <label>End Date</label>
-                <input id="end_date" name="end_date" type="date" autocomplete="name" value="{{$event->end_date ?? ''}}">
-            </div>
-            <div class="area-section">
-                <label>Start Time</label>
-                <input id="start_date" name="start_time" type="time" autocomplete="name" value="{{$event->start_time ?? ''}}">
-            </div>
-            <div class="area-section">
-                <label>End Time</label>
-                <input id="end_date" name="end_time" type="time" autocomplete="name" value="{{$event->end_time ?? ''}}">
-            </div>
-        </form>
-        <form id="image">
-            <div class="gallery">
         </form>
     </div>
 

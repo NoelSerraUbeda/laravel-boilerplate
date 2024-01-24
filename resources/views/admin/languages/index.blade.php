@@ -52,10 +52,10 @@
 
     @section('form')
         <div class="crud-form-buttons">
-            <div class="crud-form-windows">
+            <div class="crud-form-windows tabs">
                 <ul>
-                    <li id="main-option" class="selected">Principal</li>
-                    <li id="image-option">Imágenes</li>
+                    <li id="main-option" class="tab selected" data-tab="general">Principal</li>
+                    <li id="image-option" class="tab" data-tab="images">Imágenes</li>
                 </ul>
             </div>
             <div class="button-panel">
@@ -79,19 +79,24 @@
         </div>
 
         <div class="crud-form-area">
-            <form class="admin-form" id="main">
-                <input name="id" type="hidden" value="{{$language->id ?? ''}}">
-                <div class="area-section">
-                    <label>Name</label>
-                    <input id="name" name="name" type="text" autocomplete="name" value="{{$language->name ?? ''}}">
+            <form>
+                <div class="tab-content active" data-tab="general">
+                    <input name="id" type="hidden" value="{{$language->id ?? ''}}">
+                    <div class="area-section">
+                        <label>Name</label>
+                        <input id="name" name="name" type="text" autocomplete="name" value="{{$language->name ?? ''}}">
+                    </div>
+                    <div class="area-section">
+                        <label>Alias</label>
+                        <input id="label" name="label" type="text" autocomplete="name" value="{{$language->label ?? ''}}">
+                    </div>
                 </div>
-                <div class="area-section">
-                    <label>Alias</label>
-                    <input id="label" name="label" type="text" autocomplete="name" value="{{$language->label ?? ''}}">
+                <div class="tab-content custom-file-input" data-tab="images">
+                    <div class="form-section">
+                        <label for="avatar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-document-plus</title><path d="M14 2H6C4.89 2 4 2.89 4 4V20C4 21.11 4.89 22 6 22H13.81C13.28 21.09 13 20.05 13 19C13 18.67 13.03 18.33 13.08 18H6V16H13.81C14.27 15.2 14.91 14.5 15.68 14H6V12H18V13.08C18.33 13.03 18.67 13 19 13S19.67 13.03 20 13.08V8L14 2M13 9V3.5L18.5 9H13M18 15V18H15V20H18V23H20V20H23V18H20V15H18Z" /></svg></label>
+                        <input id="avatar" type="file" accept="image">
+                    </div>
                 </div>
-            </form>
-            <form id="image">
-                <div class="gallery">
             </form>
         </div>
     @endsection

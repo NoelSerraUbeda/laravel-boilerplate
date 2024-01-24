@@ -1,12 +1,70 @@
 .crud-form {
     flex-direction: column;
     display: flex;
-
-    margin-right: 30px;
+    margin-right: 10px;
+    width: 100%;
 }
 
 .crud-form-buttons{
     display: flex;
+}
+
+.crud-form-area form {
+    width: 92%;
+}
+
+.event-form {
+    overflow-y: scroll;
+    height: 40rem;
+}
+
+.tab-content::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-content {
+    justify-content: center;
+    padding-bottom: 20px;
+    align-items: center;
+    padding-top: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    display: none;
+    width: 52rem;
+    gap: 15px;
+}
+
+.tab-content.active {
+    display: flex;
+}
+
+.crud-form-windows-language {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    border: 5px solid hsl(216, 100%, 50%);
+    border-radius: 5px;
+    position: relative;
+    width: 95%;
+    margin-top:10px;
+    height: 3.5rem;
+}
+
+.crud-form-windows-language ul {
+    display: flex;
+    list-style: none;
+}
+
+.crud-form-windows-language li {
+    color: hsl(216, 100%, 50%);
+    padding: 1.2rem 1rem;
+    font-weight: 900;
+    margin-top: -16px;
+}
+
+.crud-form-windows-language li:hover {
+    background-color: hsl(207, 44%, 49%);
+    color: whitesmoke;
+    cursor: pointer;
 }
 
 .topnav-form-buttons {
@@ -145,7 +203,7 @@ textarea {
     font-size: 22px;
     outline: none;
     width: 21rem;
-    padding: 0.5rem;
+    padding: 0.2rem;
 }
 
 select {
@@ -157,7 +215,7 @@ select {
     font-size: 22px;
     outline: none;
     width: 23rem;
-    padding: 0.5rem;
+    padding: 0.2rem;
     margin-left: -1rem;
 }
 
@@ -222,6 +280,44 @@ textarea {
 
 textarea:focus {
     border: 5px solid hsl(216, 100%, 50%);
+}
+
+.custom-file-input {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-file-input input {
+    position: absolute;
+    font-size: 100px;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.custom-file-input label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4.5rem 0;
+    background-color: hsl(216, 100%, 50%);
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.custom-file-input svg {
+    cursor: pointer;
+    z-index: 7;
+    width: 40%;
+    fill: white;
+}
+
+.custom-file-input label:hover {
+    background-color: #2980b9;
 }
 
 @media only screen and (max-width: 769px) {
