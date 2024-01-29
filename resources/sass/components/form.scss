@@ -253,6 +253,8 @@ option {
 
 .long {
     width: 50rem;
+    text-align: left;
+    text-indent: 1rem;
 }
 
 .filter-menu input,
@@ -299,12 +301,12 @@ textarea:focus {
     border: 5px solid hsl(216, 100%, 50%);
 }
 
-.custom-file-input {
+.file {
     position: relative;
     overflow: hidden;
 }
 
-.custom-file-input input {
+.file input {
     position: absolute;
     font-size: 100px;
     height: 100%;
@@ -314,26 +316,25 @@ textarea:focus {
     opacity: 0;
 }
 
-.custom-file-input label {
-    width: 100%;
+.file label {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4.5rem 0;
+    padding: 2.5rem 0rem;
     background-color: hsl(216, 100%, 50%);
     border-radius: 15px;
     font-size: 16px;
     cursor: pointer;
 }
 
-.custom-file-input svg {
+.file svg {
     cursor: pointer;
     z-index: 7;
     width: 40%;
     fill: white;
 }
 
-.custom-file-input label:hover {
+.file label:hover {
     background-color: #2980b9;
 }
 
