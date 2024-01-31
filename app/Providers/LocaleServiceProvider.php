@@ -4,9 +4,9 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Services\LocaleService\LocaleService;
-use App\Model\Locale;
+use App\Models\Locale;
 
-class LocalServiceProvider extends ServiceProvider
+class LocaleServiceProvider extends ServiceProvider
 {
     /**
      * Register services.

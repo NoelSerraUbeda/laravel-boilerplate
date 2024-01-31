@@ -11,7 +11,7 @@ use App\Services\LocaleService\LocaleService;
 
 class EventController extends Controller
 {
-    public function __construct(private Event $event, private LocalService $localService){
+    public function __construct(private Event $event, private LocaleService $localeService){
         $this->localeService->setEntity('events');
     }
     
@@ -80,6 +80,10 @@ class EventController extends Controller
                 'id' => $request->input('id')
             ], $data);
 
+            if(request('locale')){
+                $locale = $this->localeService->store(request('locale'), $event->id);
+            }
+
             $events = $this->event
                 ->orderBy('created_at', 'desc')
                 ->paginate(10);
@@ -111,6 +115,8 @@ class EventController extends Controller
     public function edit(Event $event)
     {
         try{
+
+            $event = $this->localeService->parseLocales($event);
 
             $events = $this->event
             ->orderBy('created_at', 'desc')

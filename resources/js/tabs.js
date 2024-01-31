@@ -1,24 +1,24 @@
-const handleTabClick = (containerSelector, contentSelector) => {
-    const container = document.querySelector(containerSelector);
-    container?.addEventListener("click", (event) => {
-        const tab = event.target.closest('.tab');
-        if (tab) {
-            const tabContentId = tab.getAttribute('data-tab');
-            const targetTabContent = document.querySelector(`${contentSelector}[data-tab="${tabContentId}"]`);
+export default (() => {
 
-            document.querySelectorAll(contentSelector).forEach(content => {
-                content.classList.remove('active');
-            });
-
-            targetTabContent.classList.add('active');
-            container.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.remove('selected');
-            });
-
-            tab.classList.add('selected');
+    const main = document.querySelector('main');
+  
+    main?.addEventListener('click', (event) => {
+  
+      if (event.target.closest('.tab')) {
+  
+        if (event.target.closest('.tab').classList.contains('active')) {
+          return;
         }
+        
+        const tabClicked = event.target.closest('.tab');
+        const tabActive = tabClicked.parentElement.querySelector('.active');
+        
+        tabClicked.classList.add('active');
+        tabActive.classList.remove('active');
+  
+        document.querySelector(`.tab-content.active[data-tab="${tabActive.dataset.tab}"]`).classList.remove('active');
+        document.querySelector(`.tab-content[data-tab="${tabClicked.dataset.tab}"]`).classList.add('active');
+      }
     });
-};
-
-handleTabClick('.tabs', '.tab-content');
-handleTabClick('.language-tabs .tabs', '.area');
+    
+})();

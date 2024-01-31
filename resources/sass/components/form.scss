@@ -48,6 +48,7 @@
     display: flex;
 }
 
+
 .language-tabs {
     background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
     border: 5px solid hsl(216, 100%, 50%);
@@ -56,21 +57,28 @@
     width: 100%;
     margin-top:10px;
     height: 3.5rem;
+    display: flex;
+    flex-direction: row;
+
 }
 
 .language-tabs ul {
     display: flex;
+    flex-direction: row;
     list-style: none;
 }
 
 .language-tabs li {
-    color: hsl(216, 100%, 50%);
-    padding: 1.2rem 1rem;
     font-weight: 900;
+    padding: 1.75rem 1.5rem;
     margin-top: -16px;
 }
 
-.language-tabs li:hover {
+li{
+    color:hsl(216, 100%, 50%);
+}
+
+li:hover {
     background-color: hsl(207, 44%, 49%);
     color: whitesmoke;
     cursor: pointer;
@@ -120,25 +128,12 @@
 }
 
 .crud-form-windows li {
-    color: hsl(216, 100%, 50%);
     padding: 1.2rem 1rem;
     font-weight: 900;
     margin-top: -16px;
 }
 
-.crud-form-windows li:hover {
-    background-color: hsl(207, 44%, 49%);
-    color: whitesmoke;
-    cursor: pointer;
-}
-
-.selected#main-option
-{
-    background-color:hsl(216, 100%, 50%);
-    color: white;
-}
-
-.selected#image-option
+.tab.active
 {
     background-color:hsl(216, 100%, 50%);
     color: white;
@@ -167,7 +162,7 @@
     color: hsl(0, 0%, 96%);
     font-weight: bolder;
     text-indent: 10px;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 form {
@@ -187,32 +182,6 @@ form {
     width: 52rem;
     gap: 15px;
 }
-
-#image {
-    display: none;
-}
-
-#extra {
-    display: none;
-}
-
-#image.active {
-    display: flex;
-}
-
-#image.unactive {
-    display: none;
-}
-
-#main.active {
-    display: flex;
-}
-
-#main.unactive {
-    display: none;
-}
-
-
 
 form input,
 textarea {
@@ -247,7 +216,7 @@ option {
     background-color: hsl(211, 100%, 50%);
     height: 4rem;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 
